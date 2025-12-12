@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, jsonify
 app = Flask("Emotion Detector")
 
 @app.route("/emotionDetector")
-def emotion_detector(text):
+def emotion_detector():
     text_to_analyze = request.args.get('textToAnalyze')
     response = emotion_detector(text_to_analyze)
 
